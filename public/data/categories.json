@@ -1,0 +1,8 @@
+[
+  { "id": "farmer", "icon": "🌾", "en": "Farmer Schemes", "ta": "விவசாயத் திட்டங்கள்", "tl": "Vivasaya Thittangal" },
+  { "id": "student", "icon": "🎓", "en": "Student Schemes", "ta": "மாணவர் திட்டங்கள்", "tl": "Maanavar Thittangal" },
+  { "id": "women", "icon": "👩", "en": "Women Welfare", "ta": "பெண்கள் நலத் திட்டங்கள்", "tl": "Pengal Nala Thittangal" },
+  { "id": "health", "icon": "🏥", "en": "Health Schemes", "ta": "சுகாதார திட்டங்கள்", "tl": "Sugaathara Thittangal" },
+  { "id": "housing", "icon": "🏠", "en": "Housing Schemes", "ta": "வீட்டுத் திட்டங்கள்", "tl": "Veettu Thittangal" },
+  { "id": "pension", "icon": "👴", "en": "Pension Schemes", "ta": "ஓய்வூதிய திட்டங்கள்", "tl": "Oivuthiya Thittangal" }
+]

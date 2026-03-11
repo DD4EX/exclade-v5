@@ -1,0 +1,514 @@
+[
+  {
+    "id": "pm-kisan",
+    "category": "farmer",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://pmkisan.gov.in",
+    "popular": true,
+    "en": {
+      "name": "PM Kisan Samman Nidhi",
+      "description": "Income support scheme providing ₹6,000 per year to farmer families",
+      "eligibility": ["Must be a farmer", "Own agricultural land", "Family income below ₹2 lakh/year"],
+      "benefits": "₹6,000 per year in 3 installments of ₹2,000 each",
+      "documents": ["Aadhaar Card", "Bank Passbook", "Land Record (Patta)", "Ration Card"],
+      "steps": ["Visit nearest CSC center or VAO office", "Fill PM Kisan application form", "Submit Aadhaar, land record and bank details", "Wait for verification by Block/District officials"]
+    },
+    "ta": {
+      "name": "பிஎம் கிசான் சம்மன் நிதி",
+      "description": "விவசாயக் குடும்பங்களுக்கு ஆண்டுக்கு ₹6,000 வருமான உதவித் திட்டம்",
+      "eligibility": ["விவசாயி ஆக இருக்க வேண்டும்", "விவசாய நிலம் சொந்தமாக இருக்க வேண்டும்", "குடும்ப வருமானம் ₹2 லட்சத்திற்கு கீழ்"],
+      "benefits": "₹2,000 வீதம் 3 தவணைகளில் ஆண்டுக்கு ₹6,000",
+      "documents": ["ஆதார் அட்டை", "வங்கி பாஸ் புத்தகம்", "நிலப் பட்டா", "ரேஷன் அட்டை"],
+      "steps": ["அருகிலுள்ள CSC மையம் அல்லது VAO அலுவலகத்திற்கு செல்லவும்", "PM கிசான் விண்ணப்பப் படிவத்தை நிரப்பவும்", "ஆதார், நிலப் பதிவு மற்றும் வங்கி விவரங்களை சமர்ப்பிக்கவும்", "தொகுதி/மாவட்ட அதிகாரிகள் சரிபார்ப்புக்கு காத்திருக்கவும்"]
+    },
+    "tl": {
+      "name": "PM Kisan Samman Nidhi",
+      "description": "Vivasayi kudumbangalukku varuda ₹6,000 varumaana uthavi thittam",
+      "eligibility": ["Vivasayi aaga irukka vendum", "Vivasaya nilam sonthamaga irukka vendum", "Kudumba varumanam ₹2 latchathirkku keel"],
+      "benefits": "₹2,000 veethum 3 thavanaigalil varudathirku ₹6,000",
+      "documents": ["Aadhaar Card", "Bank Pass Book", "Nila Patta", "Ration Card"],
+      "steps": ["Arukilulla CSC maiyam allathu VAO aluvalagathirku sellavum", "PM Kisan vinapathil nirapavum", "Aadhaar, nila pathivu matrum bank vivarangalai samarpikkavum", "Block/District athigaarigal saribarpukku kaathirukavum"]
+    }
+  },
+  {
+    "id": "old-age-pension",
+    "category": "pension",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://nsap.nic.in",
+    "popular": true,
+    "en": {
+      "name": "Old Age Pension (IGNOAPS)",
+      "description": "Monthly pension for senior citizens aged 60 and above from BPL families",
+      "eligibility": ["Age 60 years or above", "Below Poverty Line (BPL)", "Not receiving any other pension"],
+      "benefits": "₹1,000 per month (₹200 Central + ₹800 State)",
+      "documents": ["Aadhaar Card", "Age Proof Certificate", "BPL Card", "Bank Passbook"],
+      "steps": ["Visit VAO office in A. Chithur", "Fill Old Age Pension application form", "Submit age proof and BPL certificate", "VAO will verify and forward to Taluk office"]
+    },
+    "ta": {
+      "name": "முதியோர் ஓய்வூதியம் (IGNOAPS)",
+      "description": "60 வயதுக்கு மேற்பட்ட BPL குடும்பத்தைச் சேர்ந்த முதியோருக்கு மாதாந்திர ஓய்வூதியம்",
+      "eligibility": ["60 வயது அல்லது அதற்கு மேல்", "வறுமைக் கோட்டிற்கு கீழ் (BPL)", "வேறு ஓய்வூதியம் பெறாதவர்"],
+      "benefits": "மாதம் ₹1,000 (₹200 மத்திய + ₹800 மாநில அரசு)",
+      "documents": ["ஆதார் அட்டை", "வயது சான்றிதழ்", "BPL அட்டை", "வங்கி பாஸ் புத்தகம்"],
+      "steps": ["A. சித்தூர் VAO அலுவலகத்திற்கு செல்லவும்", "முதியோர் ஓய்வூதிய விண்ணப்பப் படிவத்தை நிரப்பவும்", "வயது சான்றிதழ் மற்றும் BPL சான்றிதழை சமர்ப்பிக்கவும்", "VAO சரிபார்த்து தாலுக்கா அலுவலகத்திற்கு அனுப்புவார்"]
+    },
+    "tl": {
+      "name": "Muthiyor Oivuthiyam (IGNOAPS)",
+      "description": "60 vayathukku melpatta BPL kudumbathil irunthu muthiyorukku madhaanthira oivuthiyam",
+      "eligibility": ["60 vayathu allathu atharkku mel", "Varumai Koatitrku Keel (BPL)", "Vera oivuthiyam peraathavar"],
+      "benefits": "Madham ₹1,000 (₹200 Madhiya + ₹800 Maanila Arasu)",
+      "documents": ["Aadhaar Card", "Vayathu Saanrithazh", "BPL Card", "Bank Pass Book"],
+      "steps": ["A. Chithur VAO aluvalagathirku sellavum", "Muthiyor oivuthiya vinapam nirapavum", "Vayathu saanrithazh matrum BPL saanrithazhai samarpikkavum", "VAO saripaartthu Taluk aluvalagathirku anuppuvar"]
+    }
+  },
+  {
+    "id": "pmay",
+    "category": "housing",
+    "status": "Open",
+    "last_updated": "February 2026",
+    "official_source": "https://pmaymis.gov.in",
+    "popular": true,
+    "en": {
+      "name": "PM Awas Yojana (PMAY-G)",
+      "description": "Free housing scheme for rural homeless and kutcha house dwellers",
+      "eligibility": ["No pucca house", "BPL family", "Not received housing benefit before"],
+      "benefits": "₹1,20,000 for plain areas to build a house",
+      "documents": ["Aadhaar Card", "BPL Card", "Land Document", "Bank Passbook", "Photo"],
+      "steps": ["Apply through Gram Panchayat or VAO office", "Verification by Block Development Officer", "Approval and fund release in installments", "Build house as per guidelines"]
+    },
+    "ta": {
+      "name": "பிஎம் ஆவாஸ் யோஜனா (PMAY-G)",
+      "description": "கிராமப்புற வீடற்றவர்கள் மற்றும் குச்சா வீட்டில் வசிப்பவர்களுக்கான இலவச வீட்டுத் திட்டம்",
+      "eligibility": ["பக்கா வீடு இல்லாதவர்", "BPL குடும்பம்", "முன்பு வீட்டு உதவி பெறாதவர்"],
+      "benefits": "வீடு கட்ட சமவெளி பகுதிக்கு ₹1,20,000",
+      "documents": ["ஆதார் அட்டை", "BPL அட்டை", "நில ஆவணம்", "வங்கி பாஸ் புத்தகம்", "புகைப்படம்"],
+      "steps": ["கிராம பஞ்சாயத்து அல்லது VAO அலுவலகம் வழியாக விண்ணப்பிக்கவும்", "தொகுதி வளர்ச்சி அதிகாரியால் சரிபார்ப்பு", "ஒப்புதல் மற்றும் தவணைகளில் நிதி வெளியீடு", "வழிகாட்டுதல்களின்படி வீடு கட்டவும்"]
+    },
+    "tl": {
+      "name": "PM Awas Yojana (PMAY-G)",
+      "description": "Gramapura veedarravargal matrum kutcha veettil vasippavargalukkana ilavasa veettu thittam",
+      "eligibility": ["Pucca veedu illaathavar", "BPL kudumbam", "Munbu veettu uthavi peraathavar"],
+      "benefits": "Veedu katta samaveli paguthikku ₹1,20,000",
+      "documents": ["Aadhaar Card", "BPL Card", "Nila Aavanam", "Bank Pass Book", "Photo"],
+      "steps": ["Grama Panchayathu allathu VAO aluvalagam vazhiyaga vinapikkavum", "Block Development Officer sariparpu", "Oppudhal matrum thavanaigalil nidhi veliyeedu", "Vazhikattuthalgalin padi veedu kattavum"]
+    }
+  },
+  {
+    "id": "tn-uzhavar-pattakaappu",
+    "category": "farmer",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in/scheme/data_view/68",
+    "popular": false,
+    "en": {
+      "name": "TN Crop Insurance Scheme",
+      "description": "State crop insurance for farmers against natural calamities and crop failure",
+      "eligibility": ["Registered farmer in Tamil Nadu", "Crop cultivated in notified area", "Premium paid before deadline"],
+      "benefits": "Compensation based on crop loss assessment",
+      "documents": ["Aadhaar Card", "Land Record", "Bank Account", "Crop Sowing Certificate"],
+      "steps": ["Visit Agriculture Department office", "Register for crop insurance before sowing", "Pay premium amount", "Claim compensation if crop loss occurs"]
+    },
+    "ta": {
+      "name": "தமிழ்நாடு பயிர் காப்பீட்டுத் திட்டம்",
+      "description": "இயற்கை பேரிடர்கள் மற்றும் பயிர் சேதத்திற்கு எதிராக விவசாயிகளுக்கான மாநில பயிர் காப்பீடு",
+      "eligibility": ["தமிழ்நாட்டில் பதிவு செய்யப்பட்ட விவசாயி", "அறிவிக்கப்பட்ட பகுதியில் பயிர் செய்யப்பட்டது", "காலக்கெடுவிற்கு முன் பிரீமியம் செலுத்தப்பட்டது"],
+      "benefits": "பயிர் இழப்பு மதிப்பீட்டின் அடிப்படையில் இழப்பீடு",
+      "documents": ["ஆதார் அட்டை", "நில பதிவு", "வங்கி கணக்கு", "பயிர் விதைப்பு சான்றிதழ்"],
+      "steps": ["வேளாண்மை துறை அலுவலகத்திற்கு செல்லவும்", "விதைப்புக்கு முன் பயிர் காப்பீட்டில் பதிவு செய்யவும்", "பிரீமியம் தொகை செலுத்தவும்", "பயிர் இழப்பு ஏற்பட்டால் இழப்பீடு கோரவும்"]
+    },
+    "tl": {
+      "name": "Tamil Nadu Payir Kaapeettu Thittam",
+      "description": "Iyarkai peridarkal matrum payir sethaththirku ethiraga vivasayigalukkana maanila payir kaapeedu",
+      "eligibility": ["Tamil Naattil pathivu seyyapatta vivasayi", "Arivikkapatta paguthiyil payir seyyappattathu", "Kaalakeduvirku mun premium seluthappattathu"],
+      "benefits": "Payir izappu mathippeettin adippadaiyil izappeedu",
+      "documents": ["Aadhaar Card", "Nila Pathivu", "Bank Kanakku", "Payir Vidhaippu Saanrithazh"],
+      "steps": ["Velaanmai Thurai aluvalagathirku sellavum", "Vidhaippukku mun payir kaapeettil pathivu seyyavum", "Premium thogai seluthavum", "Payir izappu erpattal izappeedu koravum"]
+    }
+  },
+  {
+    "id": "free-laptop",
+    "category": "student",
+    "status": "Open",
+    "last_updated": "January 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "TN Free Laptop Scheme",
+      "description": "Free laptops for government school students who pass 12th standard",
+      "eligibility": ["Student of Tamil Nadu government school", "Passed 12th standard", "Family income below limit"],
+      "benefits": "Free laptop with educational software",
+      "documents": ["12th Marksheet", "School Certificate", "Aadhaar Card", "Community Certificate"],
+      "steps": ["Pass 12th standard in government school", "School will submit eligible student list", "Laptops distributed through school", "Collect laptop with ID proof"]
+    },
+    "ta": {
+      "name": "தமிழ்நாடு இலவச லேப்டாப் திட்டம்",
+      "description": "12ஆம் வகுப்பு தேர்ச்சி பெற்ற அரசு பள்ளி மாணவர்களுக்கு இலவச லேப்டாப்",
+      "eligibility": ["தமிழ்நாடு அரசு பள்ளி மாணவர்", "12ஆம் வகுப்பு தேர்ச்சி", "குடும்ப வருமான வரம்புக்கு கீழ்"],
+      "benefits": "கல்வி மென்பொருளுடன் இலவச லேப்டாப்",
+      "documents": ["12ஆம் வகுப்பு மதிப்பெண் பட்டியல்", "பள்ளி சான்றிதழ்", "ஆதார் அட்டை", "சமூக சான்றிதழ்"],
+      "steps": ["அரசு பள்ளியில் 12ஆம் வகுப்பு தேர்ச்சி பெறவும்", "பள்ளி தகுதியான மாணவர் பட்டியலை சமர்ப்பிக்கும்", "பள்ளி வழியாக லேப்டாப் விநியோகம்", "அடையாள ஆவணத்துடன் லேப்டாப் பெறவும்"]
+    },
+    "tl": {
+      "name": "Tamil Nadu Ilavasa Laptop Thittam",
+      "description": "12am vaguppu therchi petra arasu palli maanavargalukku ilavasa laptop",
+      "eligibility": ["Tamil Nadu arasu palli maanavar", "12am vaguppu therchi", "Kudumba varumaana varambukku keel"],
+      "benefits": "Kalvi menporulutan ilavasa laptop",
+      "documents": ["12am vaguppu mathipenu pattiyal", "Palli saanrithazh", "Aadhaar Card", "Samuga saanrithazh"],
+      "steps": ["Arasu palliyil 12am vaguppu therchi peravum", "Palli thaguthiyana maanavar pattiyalai samarpikkum", "Palli vazhiyaga laptop viniyogam", "Adaiyaala aavanathudan laptop peravum"]
+    }
+  },
+  {
+    "id": "moovalur-ramamirtham",
+    "category": "student",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Moovalur Ramamirtham Ammaiyar Higher Education Scheme",
+      "description": "₹1,000/month for girl students pursuing higher education from poor families",
+      "eligibility": ["Girl student", "Studying in college/university", "Family income below ₹2.5 lakh"],
+      "benefits": "₹1,000 per month till completion of degree",
+      "documents": ["Aadhaar Card", "College ID", "Income Certificate", "Community Certificate", "Bank Account"],
+      "steps": ["Apply through college/institution", "Submit required documents", "Verification by college and government", "Amount credited to bank account monthly"]
+    },
+    "ta": {
+      "name": "மூவலூர் ராமமிர்தம் அம்மையார் உயர்கல்வி திட்டம்",
+      "description": "ஏழை குடும்பங்களின் உயர்கல்வி பயிலும் மாணவிகளுக்கு மாதம் ₹1,000",
+      "eligibility": ["மாணவி", "கல்லூரி/பல்கலைக்கழகத்தில் படிக்கும்", "குடும்ப வருமானம் ₹2.5 லட்சத்திற்கு கீழ்"],
+      "benefits": "பட்டப்படிப்பு முடியும் வரை மாதம் ₹1,000",
+      "documents": ["ஆதார் அட்டை", "கல்லூரி அடையாள அட்டை", "வருமான சான்றிதழ்", "சமூக சான்றிதழ்", "வங்கி கணக்கு"],
+      "steps": ["கல்லூரி/நிறுவனம் வழியாக விண்ணப்பிக்கவும்", "தேவையான ஆவணங்களை சமர்ப்பிக்கவும்", "கல்லூரி மற்றும் அரசு சரிபார்ப்பு", "வங்கி கணக்கில் மாதாந்திர தொகை வரவு"]
+    },
+    "tl": {
+      "name": "Moovalur Ramamirtham Ammaiyar Uyarkalvi Thittam",
+      "description": "Ezhai kudumbangalin uyarkalvi payilum maanavikaLukku madham ₹1,000",
+      "eligibility": ["Maanavi", "Kalloori/Palkalaikalagathil padikkum", "Kudumba varumanam ₹2.5 latchathirku keel"],
+      "benefits": "Pattapadippu mudiyum varai madham ₹1,000",
+      "documents": ["Aadhaar Card", "Kalloori ID", "Varumaana Saanrithazh", "Samuga Saanrithazh", "Bank Kanakku"],
+      "steps": ["Kalloori vazhiyaga vinapikkavum", "Thevaiyana aavangalai samarpikkavum", "Kalloori matrum arasu sariparpu", "Bank kanakkil madhaanthira thogai varavu"]
+    }
+  },
+  {
+    "id": "muthulakshmi-reddy",
+    "category": "women",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Dr. Muthulakshmi Reddy Maternity Benefit Scheme",
+      "description": "₹18,000 maternity assistance for poor pregnant women",
+      "eligibility": ["Pregnant woman", "BPL family", "First two deliveries only", "Age 19+"],
+      "benefits": "₹18,000 in installments during pregnancy and after delivery",
+      "documents": ["Aadhaar Card", "Pregnancy Certificate", "BPL Card", "Bank Passbook", "Family Card"],
+      "steps": ["Register at Primary Health Centre", "Submit pregnancy certificate", "Receive installments at different pregnancy stages", "Final installment after delivery and vaccination"]
+    },
+    "ta": {
+      "name": "டாக்டர் முத்துலட்சுமி ரெட்டி மகப்பேறு நல திட்டம்",
+      "description": "ஏழை கர்ப்பிணிப் பெண்களுக்கு ₹18,000 மகப்பேறு உதவி",
+      "eligibility": ["கர்ப்பிணி பெண்", "BPL குடும்பம்", "முதல் இரண்டு பிரசவங்களுக்கு மட்டும்", "19 வயதுக்கு மேல்"],
+      "benefits": "கர்ப்பம் மற்றும் பிரசவத்திற்குப் பின் தவணைகளில் ₹18,000",
+      "documents": ["ஆதார் அட்டை", "கர்ப்ப சான்றிதழ்", "BPL அட்டை", "வங்கி பாஸ் புத்தகம்", "குடும்ப அட்டை"],
+      "steps": ["ஆரம்ப சுகாதார நிலையத்தில் பதிவு செய்யவும்", "கர்ப்ப சான்றிதழை சமர்ப்பிக்கவும்", "கர்ப்ப காலத்தின் வெவ்வேறு கட்டங்களில் தவணைகள் பெறவும்", "பிரசவம் மற்றும் தடுப்பூசிக்குப் பின் இறுதி தவணை"]
+    },
+    "tl": {
+      "name": "Dr. Muthulakshmi Reddy Makaperu Nala Thittam",
+      "description": "Ezhai karpini pengalukku ₹18,000 makaperu uthavi",
+      "eligibility": ["Karpini pen", "BPL kudumbam", "Mudhal irandu pirasavangalukku mattum", "19 vayathukku mel"],
+      "benefits": "Karpam matrum pirasavaththirku pin thavanaigalil ₹18,000",
+      "documents": ["Aadhaar Card", "Karpa Saanrithazh", "BPL Card", "Bank Pass Book", "Kudumba Attai"],
+      "steps": ["Aarampa Sugaathara Nilaiyathil pathivu seyyavum", "Karpa saanrithazhail samarpikkavum", "Karpa kaalathyin veveru kattangalil thavanaigal peravum", "Pirasavam matrum thaduppusikku pin iruthi thavnai"]
+    }
+  },
+  {
+    "id": "widow-pension",
+    "category": "women",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Widow Pension Scheme",
+      "description": "Monthly pension for widows from economically weaker sections",
+      "eligibility": ["Widow", "Age 18+", "Annual family income below ₹24,000", "Not receiving other pension"],
+      "benefits": "₹1,000 per month",
+      "documents": ["Aadhaar Card", "Death Certificate of Husband", "Income Certificate", "Bank Passbook"],
+      "steps": ["Visit VAO office", "Submit widow pension application", "Provide husband's death certificate", "Verification and approval by Taluk office"]
+    },
+    "ta": {
+      "name": "விதவை ஓய்வூதிய திட்டம்",
+      "description": "பொருளாதாரத்தில் பின்தங்கிய பிரிவினரின் விதவைகளுக்கு மாதாந்திர ஓய்வூதியம்",
+      "eligibility": ["விதவை", "18 வயதுக்கு மேல்", "ஆண்டு குடும்ப வருமானம் ₹24,000க்கு கீழ்", "வேறு ஓய்வூதியம் பெறாதவர்"],
+      "benefits": "மாதம் ₹1,000",
+      "documents": ["ஆதார் அட்டை", "கணவரின் இறப்புச் சான்றிதழ்", "வருமான சான்றிதழ்", "வங்கி பாஸ் புத்தகம்"],
+      "steps": ["VAO அலுவலகத்திற்கு செல்லவும்", "விதவை ஓய்வூதிய விண்ணப்பம் சமர்ப்பிக்கவும்", "கணவரின் இறப்புச் சான்றிதழ் வழங்கவும்", "தாலுக்கா அலுவலகத்தால் சரிபார்ப்பு மற்றும் ஒப்புதல்"]
+    },
+    "tl": {
+      "name": "Vidhavai Oivuthiya Thittam",
+      "description": "Porulathaarathil pinthangiya pirivinarin vidhavaigalukku madhaanthira oivuthiyam",
+      "eligibility": ["Vidhavai", "18 vayathukku mel", "Varuda kudumba varumanam ₹24,000kku keel", "Vera oivuthiyam peraathavar"],
+      "benefits": "Madham ₹1,000",
+      "documents": ["Aadhaar Card", "Kanavarin Irappu Saanrithazh", "Varumaana Saanrithazh", "Bank Pass Book"],
+      "steps": ["VAO aluvalagathirku sellavum", "Vidhavai oivuthiya vinapam samarpikkavum", "Kanavarin irappu saanrithazh vazhangavum", "Taluk aluvalagathaal sariparpu matrum oppudhal"]
+    }
+  },
+  {
+    "id": "cmchis",
+    "category": "health",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.cmchistn.com",
+    "popular": false,
+    "en": {
+      "name": "CM Comprehensive Health Insurance (CMCHIS)",
+      "description": "Free treatment up to ₹5 lakh per family per year in empanelled hospitals",
+      "eligibility": ["Family income below ₹72,000/year", "Tamil Nadu resident", "Ration card holder"],
+      "benefits": "Free treatment up to ₹5 lakh for 1,027 procedures",
+      "documents": ["Aadhaar Card", "Ration Card", "CMCHIS Health Card", "Income Certificate"],
+      "steps": ["Get CMCHIS card from Taluk Hospital or PHC", "Visit empanelled hospital when needed", "Show CMCHIS card at hospital", "Get cashless treatment"]
+    },
+    "ta": {
+      "name": "முதலமைச்சர் விரிவான சுகாதார காப்பீட்டுத் திட்டம் (CMCHIS)",
+      "description": "பதிவு செய்யப்பட்ட மருத்துவமனைகளில் குடும்பத்திற்கு ஆண்டுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை",
+      "eligibility": ["குடும்ப வருமானம் ₹72,000/ஆண்டுக்கு கீழ்", "தமிழ்நாடு வாழ்வோர்", "ரேஷன் அட்டை வைத்திருப்பவர்"],
+      "benefits": "1,027 நடைமுறைகளுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை",
+      "documents": ["ஆதார் அட்டை", "ரேஷன் அட்டை", "CMCHIS சுகாதார அட்டை", "வருமான சான்றிதழ்"],
+      "steps": ["தாலுக்கா மருத்துவமனை அல்லது PHC யிலிருந்து CMCHIS அட்டை பெறவும்", "தேவைப்படும்போது பதிவு செய்யப்பட்ட மருத்துவமனைக்கு செல்லவும்", "மருத்துவமனையில் CMCHIS அட்டையைக் காட்டவும்", "பணமில்லா சிகிச்சை பெறவும்"]
+    },
+    "tl": {
+      "name": "Mudhalamaichar Virivana Sugaathara Kaapeettu Thittam (CMCHIS)",
+      "description": "Pathivu seyyapatta maruthuvamanigalil kudumbathirku varudathirku ₹5 latcham varai ilavasa sikichai",
+      "eligibility": ["Kudumba varumanam ₹72,000/varudathirku keel", "Tamil Nadu vaazhvor", "Ration card vaiththiruppavar"],
+      "benefits": "1,027 nadaimuraigalukku ₹5 latcham varai ilavasa sikichai",
+      "documents": ["Aadhaar Card", "Ration Card", "CMCHIS Sugaathara Attai", "Varumaana Saanrithazh"],
+      "steps": ["Taluk maruthuvamanai allathu PHC yilirunthu CMCHIS attai peravum", "Thevaipadum pothu pathivu seyyapatta maruthuvamanaikku sellavum", "Maruthuvamanai yil CMCHIS attaiyai kaattavum", "Panamilla sikichai peravum"]
+    }
+  },
+  {
+    "id": "ayushman-bharat",
+    "category": "health",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://pmjay.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Ayushman Bharat (PM-JAY)",
+      "description": "Health insurance of ₹5 lakh per family per year for secondary and tertiary hospitalization",
+      "eligibility": ["SECC database listed family", "No government job in family", "BPL category"],
+      "benefits": "₹5 lakh per family per year for hospitalization",
+      "documents": ["Aadhaar Card", "Ration Card", "PMJAY Card"],
+      "steps": ["Check eligibility on mera.pmjay.gov.in", "Visit CSC center to get PMJAY card", "Visit empanelled hospital", "Show PMJAY card for cashless treatment"]
+    },
+    "ta": {
+      "name": "ஆயுஷ்மான் பாரத் (PM-JAY)",
+      "description": "இரண்டாம் மற்றும் மூன்றாம் நிலை மருத்துவமனைக்கு குடும்பத்திற்கு ஆண்டுக்கு ₹5 லட்சம் சுகாதார காப்பீடு",
+      "eligibility": ["SECC தரவுத்தளத்தில் பட்டியலிடப்பட்ட குடும்பம்", "குடும்பத்தில் அரசு வேலை இல்லை", "BPL பிரிவு"],
+      "benefits": "மருத்துவமனைக்கு குடும்பத்திற்கு ஆண்டுக்கு ₹5 லட்சம்",
+      "documents": ["ஆதார் அட்டை", "ரேஷன் அட்டை", "PMJAY அட்டை"],
+      "steps": ["mera.pmjay.gov.in இல் தகுதியை சரிபார்க்கவும்", "PMJAY அட்டை பெற CSC மையத்திற்கு செல்லவும்", "பதிவு செய்யப்பட்ட மருத்துவமனைக்கு செல்லவும்", "பணமில்லா சிகிச்சைக்கு PMJAY அட்டையைக் காட்டவும்"]
+    },
+    "tl": {
+      "name": "Ayushman Bharat (PM-JAY)",
+      "description": "Irandaam matrum moondram nilai maruthuvamanaikku kudumbathirku varudathirku ₹5 latcham sugaathara kaapeedu",
+      "eligibility": ["SECC tharavuthilathil pattiyalidapatta kudumbam", "Kudumbathil arasu velai illai", "BPL pirivu"],
+      "benefits": "Maruthuvamanaikku kudumbathirku varudathirku ₹5 latcham",
+      "documents": ["Aadhaar Card", "Ration Card", "PMJAY Card"],
+      "steps": ["mera.pmjay.gov.in il thaguthiyai sariparkavum", "PMJAY attai pera CSC maiyathirku sellavum", "Pathivu seyyapatta maruthuvamanaikku sellavum", "Panamilla sikichaiku PMJAY attaiyai kaattavum"]
+    }
+  },
+  {
+    "id": "differently-abled-pension",
+    "category": "pension",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Differently Abled Pension",
+      "description": "Monthly pension for persons with 40%+ disability",
+      "eligibility": ["40% or more disability", "Tamil Nadu resident", "Income below ₹12,000/year"],
+      "benefits": "₹1,500 per month",
+      "documents": ["Aadhaar Card", "Disability Certificate", "Income Certificate", "Bank Passbook"],
+      "steps": ["Get disability certificate from government hospital", "Visit District Differently Abled Welfare Office", "Submit application with documents", "Pension credited to bank account monthly"]
+    },
+    "ta": {
+      "name": "மாற்றுத்திறனாளிகள் ஓய்வூதியம்",
+      "description": "40%+ ஊனமுற்றவர்களுக்கு மாதாந்திர ஓய்வூதியம்",
+      "eligibility": ["40% அல்லது அதற்கு மேல் ஊனம்", "தமிழ்நாடு வாழ்வோர்", "வருமானம் ₹12,000/ஆண்டுக்கு கீழ்"],
+      "benefits": "மாதம் ₹1,500",
+      "documents": ["ஆதார் அட்டை", "ஊனமுற்றோர் சான்றிதழ்", "வருமான சான்றிதழ்", "வங்கி பாஸ் புத்தகம்"],
+      "steps": ["அரசு மருத்துவமனையிலிருந்து ஊனமுற்றோர் சான்றிதழ் பெறவும்", "மாவட்ட மாற்றுத்திறனாளிகள் நல அலுவலகத்திற்கு செல்லவும்", "ஆவணங்களுடன் விண்ணப்பம் சமர்ப்பிக்கவும்", "வங்கி கணக்கில் மாதாந்திர ஓய்வூதியம் வரவு"]
+    },
+    "tl": {
+      "name": "Maatruthiranaligal Oivuthiyam",
+      "description": "40%+ oonamuttravargalukku madhaanthira oivuthiyam",
+      "eligibility": ["40% allathu atharkku mel oonam", "Tamil Nadu vaazhvor", "Varumanam ₹12,000/varudathirku keel"],
+      "benefits": "Madham ₹1,500",
+      "documents": ["Aadhaar Card", "Oonamuttror Saanrithazh", "Varumaana Saanrithazh", "Bank Pass Book"],
+      "steps": ["Arasu maruthuvamanai yilirunthu oonamuttror saanrithazh peravum", "Maavatta Maatruthiranaligal Nala Aluvalagathirku sellavum", "Aavaningaludan vinapam samarpikkavum", "Bank kanakkil madhaanthira oivuthiyam varavu"]
+    }
+  },
+  {
+    "id": "free-sewing-machine",
+    "category": "women",
+    "status": "Open",
+    "last_updated": "February 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Free Sewing Machine Scheme",
+      "description": "Free sewing machine for women from economically weaker sections for self-employment",
+      "eligibility": ["Woman aged 20-40", "BPL family", "Not employed in government"],
+      "benefits": "One free sewing machine",
+      "documents": ["Aadhaar Card", "Income Certificate", "Age Proof", "BPL Card"],
+      "steps": ["Apply at District Industries Centre", "Submit application with documents", "Attend interview if called", "Collect sewing machine after approval"]
+    },
+    "ta": {
+      "name": "இலவச தையல் இயந்திர திட்டம்",
+      "description": "சுயதொழில் செய்ய பொருளாதாரத்தில் பின்தங்கிய பெண்களுக்கு இலவச தையல் இயந்திரம்",
+      "eligibility": ["20-40 வயது பெண்", "BPL குடும்பம்", "அரசு வேலையில் இல்லாதவர்"],
+      "benefits": "ஒரு இலவச தையல் இயந்திரம்",
+      "documents": ["ஆதார் அட்டை", "வருமான சான்றிதழ்", "வயது சான்று", "BPL அட்டை"],
+      "steps": ["மாவட்ட தொழில் மையத்தில் விண்ணப்பிக்கவும்", "ஆவணங்களுடன் விண்ணப்பம் சமர்ப்பிக்கவும்", "அழைக்கப்பட்டால் நேர்காணலுக்கு வரவும்", "ஒப்புதலுக்குப் பின் தையல் இயந்திரம் பெறவும்"]
+    },
+    "tl": {
+      "name": "Ilavasa Thaiyal Iyanthira Thittam",
+      "description": "Suyathozhil seyya porulathaarathil pinthangiya pengalukku ilavasa thaiyal iyanthiram",
+      "eligibility": ["20-40 vayathu pen", "BPL kudumbam", "Arasu velaiyil illaathavar"],
+      "benefits": "Oru ilavasa thaiyal iyanthiram",
+      "documents": ["Aadhaar Card", "Varumaana Saanrithazh", "Vayathu Saanru", "BPL Card"],
+      "steps": ["Maavatta Thozhil Maiyathil vinapikkavum", "Aavaningaludan vinapam samarpikkavum", "Azhaikkappattaal nerkanalukku varavum", "Oppudhalukku pin thaiyal iyanthiram peravum"]
+    }
+  },
+  {
+    "id": "amma-unavagam",
+    "category": "health",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Amma Unavagam (Amma Canteen)",
+      "description": "Subsidized meals for the public at very low prices",
+      "eligibility": ["Open to all", "No documents needed"],
+      "benefits": "Idli ₹1, Rice meals ₹5, Chapathi ₹3",
+      "documents": ["No documents required"],
+      "steps": ["Visit nearest Amma Unavagam", "Buy tokens", "Eat at subsidized rates"]
+    },
+    "ta": {
+      "name": "அம்மா உணவகம்",
+      "description": "மிகக் குறைந்த விலையில் பொதுமக்களுக்கு மானிய உணவு",
+      "eligibility": ["அனைவருக்கும் திறந்தது", "ஆவணங்கள் தேவையில்லை"],
+      "benefits": "இட்லி ₹1, சாத உணவு ₹5, சப்பாத்தி ₹3",
+      "documents": ["ஆவணங்கள் தேவையில்லை"],
+      "steps": ["அருகிலுள்ள அம்மா உணவகத்திற்கு செல்லவும்", "டோக்கன்கள் வாங்கவும்", "மானிய விலையில் சாப்பிடவும்"]
+    },
+    "tl": {
+      "name": "Amma Unavagam",
+      "description": "Migak kuraintha vilaiyil pothumakkalukku maaniya unavu",
+      "eligibility": ["Anaivarkkum thiranthadu", "Aavaningal thevai illai"],
+      "benefits": "Idli ₹1, Saatham unavu ₹5, Chappathi ₹3",
+      "documents": ["Aavaningal thevai illai"],
+      "steps": ["Arukilulla Amma Unavagathirku sellvum", "Token vaangavum", "Maaniya vilaiyil saapidavum"]
+    }
+  },
+  {
+    "id": "kalaignar-magalir-urimai",
+    "category": "women",
+    "status": "Open",
+    "last_updated": "March 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Kalaignar Magalir Urimai Thittam",
+      "description": "₹1,000 per month for women heads of families",
+      "eligibility": ["Woman head of family", "Age 21+", "Tamil Nadu resident", "Annual income below ₹2.5 lakh"],
+      "benefits": "₹1,000 per month credited to bank account",
+      "documents": ["Aadhaar Card", "Ration Card", "Bank Passbook", "Income Certificate"],
+      "steps": ["Apply online or at ration shop", "Submit documents for verification", "Biometric verification", "Amount credited monthly"]
+    },
+    "ta": {
+      "name": "கலைஞர் மகளிர் உரிமைத் திட்டம்",
+      "description": "குடும்பத் தலைவிகளுக்கு மாதம் ₹1,000",
+      "eligibility": ["குடும்பத் தலைவி", "21 வயதுக்கு மேல்", "தமிழ்நாடு வாழ்வோர்", "ஆண்டு வருமானம் ₹2.5 லட்சத்திற்கு கீழ்"],
+      "benefits": "வங்கி கணக்கில் மாதம் ₹1,000 வரவு",
+      "documents": ["ஆதார் அட்டை", "ரேஷன் அட்டை", "வங்கி பாஸ் புத்தகம்", "வருமான சான்றிதழ்"],
+      "steps": ["ஆன்லைனில் அல்லது ரேஷன் கடையில் விண்ணப்பிக்கவும்", "சரிபார்ப்புக்கு ஆவணங்களை சமர்ப்பிக்கவும்", "பயோமெட்ரிக் சரிபார்ப்பு", "மாதாந்திர தொகை வரவு"]
+    },
+    "tl": {
+      "name": "Kalaignar Magalir Urimai Thittam",
+      "description": "Kudumba thalaivikaLukku madham ₹1,000",
+      "eligibility": ["Kudumba thalaivi", "21 vayathukku mel", "Tamil Nadu vaazhvor", "Varuda varumanam ₹2.5 latchathirku keel"],
+      "benefits": "Bank kanakkil madham ₹1,000 varavu",
+      "documents": ["Aadhaar Card", "Ration Card", "Bank Pass Book", "Varumaana Saanrithazh"],
+      "steps": ["Online allathu ration kadaiyil vinapikkavum", "Sariparpukku aavaningalai samarpikkavum", "Biometric sariparpu", "Madhaanthira thogai varavu"]
+    }
+  },
+  {
+    "id": "subsidy-agriculture",
+    "category": "farmer",
+    "status": "Open",
+    "last_updated": "February 2026",
+    "official_source": "https://www.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "Agricultural Equipment Subsidy",
+      "description": "50-80% subsidy on agricultural equipment like pump sets, sprayers, and tractors",
+      "eligibility": ["Small/marginal farmer", "Tamil Nadu resident", "Own agricultural land"],
+      "benefits": "50-80% subsidy on equipment cost",
+      "documents": ["Aadhaar Card", "Land Record", "Bank Account", "Farmer ID"],
+      "steps": ["Visit Agricultural Engineering Department", "Select equipment and apply for subsidy", "Submit documents", "Get approval and purchase equipment"]
+    },
+    "ta": {
+      "name": "விவசாய உபகரண மானியம்",
+      "description": "பம்ப் செட்கள், ஸ்ப்ரேயர்கள் மற்றும் டிராக்டர்கள் போன்ற விவசாய உபகரணங்களில் 50-80% மானியம்",
+      "eligibility": ["சிறு/குறு விவசாயி", "தமிழ்நாடு வாழ்வோர்", "சொந்த விவசாய நிலம்"],
+      "benefits": "உபகரண விலையில் 50-80% மானியம்",
+      "documents": ["ஆதார் அட்டை", "நில பதிவு", "வங்கி கணக்கு", "விவசாயி அடையாள அட்டை"],
+      "steps": ["விவசாய பொறியியல் துறைக்கு செல்லவும்", "உபகரணத்தைத் தேர்ந்தெடுத்து மானியத்திற்கு விண்ணப்பிக்கவும்", "ஆவணங்களை சமர்ப்பிக்கவும்", "ஒப்புதல் பெற்று உபகரணம் வாங்கவும்"]
+    },
+    "tl": {
+      "name": "Vivasaya Upakarana Maaniyam",
+      "description": "Pump sets, sprayers matrum tractors poanra vivasaya upakarangalil 50-80% maaniyam",
+      "eligibility": ["Siru/kuru vivasayi", "Tamil Nadu vaazhvor", "Sontha vivasaya nilam"],
+      "benefits": "Upakarana vilaiyil 50-80% maaniyam",
+      "documents": ["Aadhaar Card", "Nila Pathivu", "Bank Kanakku", "Vivasayi Adaiyaala Attai"],
+      "steps": ["Vivasaya Poriyiyal Thuraikku sellvum", "Upakaranathaith therndheduthu maaniyathirku vinapikkavum", "Aavaningalai samarpikkavum", "Oppudhal petru upakaranam vaangavum"]
+    }
+  },
+  {
+    "id": "tn-housing-board",
+    "category": "housing",
+    "status": "Open",
+    "last_updated": "January 2026",
+    "official_source": "https://www.tnhb.tn.gov.in",
+    "popular": false,
+    "en": {
+      "name": "TN Housing Board - EWS Houses",
+      "description": "Affordable houses for Economically Weaker Sections through TN Housing Board",
+      "eligibility": ["EWS category", "No own house", "Tamil Nadu resident"],
+      "benefits": "Affordable housing with EMI facility",
+      "documents": ["Aadhaar Card", "Income Certificate", "Nativity Certificate", "Bank Statement"],
+      "steps": ["Check TNHB website for available houses", "Apply online or at TNHB office", "Submit required documents", "Pay booking amount and EMI"]
+    },
+    "ta": {
+      "name": "தமிழ்நாடு வீட்டு வசதி வாரியம் - EWS வீடுகள்",
+      "description": "பொருளாதாரத்தில் பின்தங்கிய பிரிவினருக்கு தமிழ்நாடு வீட்டு வசதி வாரியம் மூலம் மலிவான வீடுகள்",
+      "eligibility": ["EWS பிரிவு", "சொந்த வீடு இல்லை", "தமிழ்நாடு வாழ்வோர்"],
+      "benefits": "EMI வசதியுடன் மலிவான வீடு",
+      "documents": ["ஆதார் அட்டை", "வருமான சான்றிதழ்", "பூர்வீக சான்றிதழ்", "வங்கி அறிக்கை"],
+      "steps": ["TNHB இணையதளத்தில் கிடைக்கும் வீடுகளை சரிபார்க்கவும்", "ஆன்லைனில் அல்லது TNHB அலுவலகத்தில் விண்ணப்பிக்கவும்", "தேவையான ஆவணங்களை சமர்ப்பிக்கவும்", "முன்பதிவு தொகை மற்றும் EMI செலுத்தவும்"]
+    },
+    "tl": {
+      "name": "Tamil Nadu Veettu Vasathi Vaariyam - EWS Veedugal",
+      "description": "Porulathaarathil pinthangiya pirivinarkku TNHB moolam malivaana veedugal",
+      "eligibility": ["EWS pirivu", "Sontha veedu illai", "Tamil Nadu vaazhvor"],
+      "benefits": "EMI vasathiyudan malivaana veedu",
+      "documents": ["Aadhaar Card", "Varumaana Saanrithazh", "Poorveega Saanrithazh", "Bank Arikkai"],
+      "steps": ["TNHB inaiyathalathil kidaikkum veedugalai sariparkavum", "Online allathu TNHB aluvalagathil vinapikkavum", "Thevaiyana aavaningalai samarpikkavum", "Munpathivu thogai matrum EMI seluthavum"]
+    }
+  }
+]
