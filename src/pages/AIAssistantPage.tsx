@@ -5,6 +5,7 @@ import { useSchemes } from '@/lib/schemes-context';
 import { t } from '@/lib/i18n';
 import { ArrowLeft, Send, Mic } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { getSmartAnswer } from '@/lib/ai-engine';
 
 type Message = { role: 'user' | 'assistant'; content: string };
 
@@ -21,58 +22,6 @@ const AIAssistantPage = () => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  const getLocalAnswer = (query: string): string => {
-    const q = query.toLowerCase();
-    const matchedSchemes = schemes.filter(s => {
-      const d = s[lang as keyof typeof s] as any;
-      return d?.name?.toLowerCase().includes(q) ||
-        d?.description?.toLowerCase().includes(q) ||
-        s.category.toLowerCase().includes(q);
-    });
-
-    if (matchedSchemes.length > 0) {
-      const langKey = lang as 'en' | 'ta' | 'tl';
-      return matchedSchemes.map(s => {
-        const d = s[langKey];
-        return `**${d.name}**\n${d.description}\n\n${t(lang, 'benefits')}: ${d.benefits}\n${t(lang, 'status')}: ${s.status}`;
-      }).join('\n\n---\n\n');
-    }
-
-    // Check for keywords
-    const keywords: Record<string, string[]> = {
-      farmer: ['farmer', 'vivasayi', 'விவசாயி', 'farm', 'agriculture', 'crop', 'payir'],
-      student: ['student', 'maanavar', 'மாணவர்', 'school', 'college', 'laptop', 'scholarship'],
-      women: ['women', 'pengal', 'பெண்', 'woman', 'maternity', 'widow', 'magalir'],
-      health: ['health', 'sugaathara', 'சுகாதார', 'hospital', 'medical', 'insurance'],
-      housing: ['house', 'veedu', 'வீடு', 'housing', 'awas', 'home'],
-      pension: ['pension', 'oivuthiyam', 'ஓய்வூதியம்', 'senior', 'old age', 'muthiyor'],
-    };
-
-    for (const [cat, words] of Object.entries(keywords)) {
-      if (words.some(w => q.includes(w))) {
-        const catSchemes = schemes.filter(s => s.category === cat);
-        if (catSchemes.length > 0) {
-          const langKey = lang as 'en' | 'ta' | 'tl';
-          return catSchemes.map(s => {
-            const d = s[langKey];
-            return `**${d.name}** - ${d.description}`;
-          }).join('\n\n');
-        }
-      }
-    }
-
-    const allNames = schemes.map(s => {
-      const d = s[lang as 'en' | 'ta' | 'tl'];
-      return `• ${d.name}`;
-    }).join('\n');
-
-    return lang === 'ta'
-      ? `உங்கள் கேள்விக்கு நேரடி பொருத்தம் கிடைக்கவில்லை. இங்கு உள்ள அனைத்து திட்டங்கள்:\n\n${allNames}`
-      : lang === 'tl'
-      ? `Ungal kelvikku neradi porutham kidaikkavaillai. Ingu ulla anaithu thittangal:\n\n${allNames}`
-      : `I couldn't find an exact match. Here are all available schemes:\n\n${allNames}`;
-  };
-
   const send = () => {
     if (!input.trim() || loading) return;
     const userMsg: Message = { role: 'user', content: input.trim() };
@@ -81,10 +30,10 @@ const AIAssistantPage = () => {
     setLoading(true);
 
     setTimeout(() => {
-      const answer = getLocalAnswer(userMsg.content);
+      const answer = getSmartAnswer(userMsg.content, schemes as any, lang);
       setMessages(prev => [...prev, { role: 'assistant', content: answer }]);
       setLoading(false);
-    }, 500);
+    }, 300);
   };
 
   const startVoice = () => {
