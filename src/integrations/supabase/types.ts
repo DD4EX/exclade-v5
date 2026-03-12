@@ -14,7 +14,81 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      live_schemes: {
+        Row: {
+          category: string
+          created_at: string
+          data_en: Json
+          data_ta: Json
+          data_tl: Json
+          fetched_at: string
+          id: string
+          last_updated: string | null
+          official_source: string | null
+          popular: boolean | null
+          scheme_id: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          data_en?: Json
+          data_ta?: Json
+          data_tl?: Json
+          fetched_at?: string
+          id?: string
+          last_updated?: string | null
+          official_source?: string | null
+          popular?: boolean | null
+          scheme_id: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          data_en?: Json
+          data_ta?: Json
+          data_tl?: Json
+          fetched_at?: string
+          id?: string
+          last_updated?: string | null
+          official_source?: string | null
+          popular?: boolean | null
+          scheme_id?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      sync_log: {
+        Row: {
+          created_at: string
+          error_message: string | null
+          id: string
+          schemes_count: number | null
+          status: string
+          sync_type: string
+        }
+        Insert: {
+          created_at?: string
+          error_message?: string | null
+          id?: string
+          schemes_count?: number | null
+          status: string
+          sync_type: string
+        }
+        Update: {
+          created_at?: string
+          error_message?: string | null
+          id?: string
+          schemes_count?: number | null
+          status?: string
+          sync_type?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
