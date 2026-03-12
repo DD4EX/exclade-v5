@@ -5,11 +5,11 @@ import { useSchemes } from '@/lib/schemes-context';
 import { t, Language } from '@/lib/i18n';
 import { Input } from '@/components/ui/input';
 import SchemeCard from '@/components/SchemeCard';
-import { Search, Mic, MessageCircle } from 'lucide-react';
+import { Search, Mic, MessageCircle, RefreshCw, Cloud, CloudOff } from 'lucide-react';
 
 const HomePage = () => {
   const { lang } = useLanguage();
-  const { schemes, categories } = useSchemes();
+  const { schemes, categories, lastSynced, syncStatus, refreshFromCloud } = useSchemes();
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
 
@@ -37,8 +37,31 @@ const HomePage = () => {
     <div className="pb-20">
       {/* Header */}
       <div className="bg-primary text-primary-foreground p-4 pt-6">
-        <h1 className="text-lg font-bold">{t(lang, 'appTitle')}</h1>
-        <p className="text-sm opacity-80">{t(lang, 'appSubtitle')}</p>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-lg font-bold">{t(lang, 'appTitle')}</h1>
+            <p className="text-sm opacity-80">{t(lang, 'appSubtitle')}</p>
+          </div>
+          <button 
+            onClick={refreshFromCloud}
+            disabled={syncStatus === 'syncing'}
+            className="p-2 rounded-full bg-primary-foreground/20 hover:bg-primary-foreground/30 transition-colors"
+          >
+            <RefreshCw className={`h-5 w-5 ${syncStatus === 'syncing' ? 'animate-spin' : ''}`} />
+          </button>
+        </div>
+        {/* Sync status bar */}
+        <div className="flex items-center gap-1.5 mt-2 text-xs opacity-70">
+          {navigator.onLine ? <Cloud className="h-3 w-3" /> : <CloudOff className="h-3 w-3" />}
+          <span>
+            {syncStatus === 'syncing' 
+              ? (lang === 'ta' ? 'புதுப்பிக்கிறது...' : lang === 'tl' ? 'Pudhuppikkurathu...' : 'Syncing...')
+              : lastSynced 
+                ? `${lang === 'ta' ? 'கடைசி புதுப்பிப்பு' : lang === 'tl' ? 'Kadaisi pudhupippu' : 'Last sync'}: ${lastSynced}`
+                : (lang === 'ta' ? 'உள்ளூர் தரவு' : lang === 'tl' ? 'Ulloor data' : 'Local data')}
+          </span>
+          <span className="ml-auto">{schemes.length} {lang === 'ta' ? 'திட்டங்கள்' : lang === 'tl' ? 'thittangal' : 'schemes'}</span>
+        </div>
       </div>
 
       {/* Search */}
