@@ -5,11 +5,11 @@ import { useSchemes } from '@/lib/schemes-context';
 import { t, Language } from '@/lib/i18n';
 import { Input } from '@/components/ui/input';
 import SchemeCard from '@/components/SchemeCard';
-import { Search, Mic, MessageCircle } from 'lucide-react';
+import { Search, Mic, MessageCircle, RefreshCw, Cloud, CloudOff } from 'lucide-react';
 
 const HomePage = () => {
   const { lang } = useLanguage();
-  const { schemes, categories } = useSchemes();
+  const { schemes, categories, lastSynced, syncStatus, refreshFromCloud } = useSchemes();
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
 
