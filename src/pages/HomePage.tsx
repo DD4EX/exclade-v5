@@ -5,7 +5,8 @@ import { useSchemes } from '@/lib/schemes-context';
 import { t, Language } from '@/lib/i18n';
 import { Input } from '@/components/ui/input';
 import SchemeCard from '@/components/SchemeCard';
-import { Search, Mic, MessageCircle, RefreshCw, Cloud, CloudOff } from 'lucide-react';
+import SyncBanner from '@/components/SyncBanner';
+import { Search, Mic, MessageCircle } from 'lucide-react';
 
 const HomePage = () => {
   const { lang } = useLanguage();
