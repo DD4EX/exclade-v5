@@ -13,7 +13,7 @@ const SyncBanner = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           {isOnline ? (
-            <Cloud className="h-4 w-4 text-green-600 dark:text-green-400" />
+            <Cloud className="h-4 w-4 text-primary" />
           ) : (
             <CloudOff className="h-4 w-4 text-destructive" />
           )}
