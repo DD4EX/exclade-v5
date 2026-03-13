@@ -10,7 +10,7 @@ import { Search, Mic, MessageCircle } from 'lucide-react';
 
 const HomePage = () => {
   const { lang } = useLanguage();
-  const { schemes, categories, lastSynced, syncStatus, refreshFromCloud } = useSchemes();
+  const { schemes, categories } = useSchemes();
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
 
