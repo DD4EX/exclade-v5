@@ -1,8 +1,13 @@
 [
-  { "id": "farmer", "icon": "🌾", "en": "Farmer Schemes", "ta": "விவசாயத் திட்டங்கள்", "tl": "Vivasaya Thittangal" },
-  { "id": "student", "icon": "🎓", "en": "Student Schemes", "ta": "மாணவர் திட்டங்கள்", "tl": "Maanavar Thittangal" },
+  { "id": "farmer", "icon": "🌾", "en": "Farmer & Agriculture", "ta": "விவசாயத் திட்டங்கள்", "tl": "Vivasaya Thittangal" },
+  { "id": "student", "icon": "🎓", "en": "Students & Education", "ta": "மாணவர் திட்டங்கள்", "tl": "Maanavar Thittangal" },
   { "id": "women", "icon": "👩", "en": "Women Welfare", "ta": "பெண்கள் நலத் திட்டங்கள்", "tl": "Pengal Nala Thittangal" },
   { "id": "health", "icon": "🏥", "en": "Health Schemes", "ta": "சுகாதார திட்டங்கள்", "tl": "Sugaathara Thittangal" },
   { "id": "housing", "icon": "🏠", "en": "Housing Schemes", "ta": "வீட்டுத் திட்டங்கள்", "tl": "Veettu Thittangal" },
-  { "id": "pension", "icon": "👴", "en": "Pension Schemes", "ta": "ஓய்வூதிய திட்டங்கள்", "tl": "Oivuthiya Thittangal" }
+  { "id": "pension", "icon": "👴", "en": "Pension & Social Security", "ta": "ஓய்வூதிய திட்டங்கள்", "tl": "Oivuthiya Thittangal" },
+  { "id": "rural", "icon": "🏘️", "en": "Rural Development", "ta": "கிராம வளர்ச்சி", "tl": "Grama Valarchi" },
+  { "id": "employment", "icon": "💼", "en": "Employment & Skills", "ta": "வேலைவாய்ப்பு திட்டங்கள்", "tl": "Velaivaippu Thittangal" },
+  { "id": "children", "icon": "👶", "en": "Children Welfare", "ta": "குழந்தை நலத் திட்டங்கள்", "tl": "Kuzhanthai Nala Thittangal" },
+  { "id": "food", "icon": "🍚", "en": "Food & Subsidy", "ta": "உணவு மற்றும் மானியம்", "tl": "Unavu Matrum Maaniyam" },
+  { "id": "special", "icon": "⭐", "en": "Special Schemes", "ta": "சிறப்பு திட்டங்கள்", "tl": "Sirappu Thittangal" }
 ]

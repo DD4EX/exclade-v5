@@ -17,7 +17,7 @@ function speakText(text: string, lang: string) {
   // Clean markdown formatting for speech
   const clean = text
     .replace(/\*\*/g, '')
-    .replace(/[📌📋📄✅💰🔗📊🔍❓🙏🔥📝📎🎁👤🌾🎓👩🏥🏠👴🤖---]/g, '')
+    .replace(/[📌📋📄✅💰🔗📊🔍❓🙏🔥📝📎🎁👤🌾🎓👩🏥🏠👴🤖\-]/g, '')
     .replace(/https?:\/\/\S+/g, '')
     .replace(/\n+/g, '. ')
     .trim();
