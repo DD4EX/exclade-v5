@@ -121,6 +121,33 @@ const categoryKeywords: Record<string, string[]> = {
     'thatha', 'தாத்தா', 'paatti', 'பாட்டி', 'grandpa', 'grandma',
     'vidavai', 'விதவை', 'vitavai',
   ],
+  rural: [
+    'rural', 'village', 'gramam', 'கிராமம்', 'panchayat', 'பஞ்சாயத்து',
+    'road', 'saalai', 'சாலை', 'drainage', 'vadigaal', 'வடிகால்',
+    'street light', 'theru vilakku', 'தெரு விளக்கு', 'nrega', 'mgnrega',
+    '100 days', '100 naal', '100 நாள்', 'employment', 'velai', 'வேலை',
+  ],
+  employment: [
+    'employment', 'job', 'velai', 'வேலை', 'skill', 'thiran', 'திறன்',
+    'training', 'payirchi', 'பயிற்சி', 'loan', 'kadan', 'கடன்',
+    'mudra', 'startup', 'business', 'thozhil', 'தொழில்', 'unemployed',
+    'velaiyinmai', 'வேலையின்மை', 'self employed', 'suyathozhil', 'சுயதொழில்',
+  ],
+  children: [
+    'children', 'child', 'kuzhanthai', 'குழந்தை', 'baby', 'infant',
+    'orphan', 'anaadhai', 'அநாதை', 'anganwadi', 'அங்கன்வாடி',
+    'icds', 'nutrition', 'oottachchathu', 'ஊட்டச்சத்து',
+  ],
+  food: [
+    'food', 'unavu', 'உணவு', 'rice', 'arisi', 'அரிசி', 'ration', 'ரேஷன்',
+    'pds', 'pongal', 'பொங்கல்', 'gas', 'lpg', 'ujjwala', 'electricity',
+    'minsaaram', 'மின்சாரம்', 'free rice', 'ilavasa arisi', 'இலவச அரிசி',
+    'saapadu', 'சாப்பாடு', 'saadham', 'சாதம்',
+  ],
+  special: [
+    'gig', 'worker', 'jan dhan', 'bank account', 'toilet', 'kazhivarai', 'கழிவறை',
+    'swachh', 'sports', 'vilaiyaattu', 'விளையாட்டு',
+  ],
 };
 
 // Common colloquial/broken phrases to intent mapping
