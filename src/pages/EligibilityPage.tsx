@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/lib/language-context';
 import { useSchemes, SchemeData } from '@/lib/schemes-context';
 import { t } from '@/lib/i18n';
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ChevronRight, TrendingUp, Star, Percent } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SchemeCard from '@/components/SchemeCard';
 
@@ -14,6 +14,15 @@ type Profile = {
   income: string | null;
   bpl: boolean | null;
   landOwner: boolean | null;
+  caste: string | null;
+  education: string | null;
+};
+
+type ScoredScheme = {
+  scheme: SchemeData;
+  score: number;
+  probability: number;
+  priority: 'high' | 'medium' | 'low';
 };
 
 const EligibilityPage = () => {
@@ -21,45 +30,89 @@ const EligibilityPage = () => {
   const { schemes } = useSchemes();
   const navigate = useNavigate();
   const [profile, setProfile] = useState<Profile>({
-    age: null, gender: null, occupation: null, income: null, bpl: null, landOwner: null,
+    age: null, gender: null, occupation: null, income: null, bpl: null, landOwner: null, caste: null, education: null,
   });
   const [step, setStep] = useState(0);
   const [showResults, setShowResults] = useState(false);
 
   const set = (key: keyof Profile, val: any) => setProfile(prev => ({ ...prev, [key]: val }));
 
-  const getRecommended = (): SchemeData[] => {
-    return schemes.filter(s => {
+  const getScored = useMemo(() => {
+    if (!showResults) return [];
+
+    const results: ScoredScheme[] = [];
+
+    for (const s of schemes) {
       let score = 0;
-      // Occupation match
-      if (profile.occupation === 'farmer' && s.category === 'farmer') score += 3;
-      if (profile.occupation === 'student' && (s.category === 'student')) score += 3;
-      if (profile.occupation === 'worker' && ['employment', 'rural'].includes(s.category)) score += 2;
-      if (profile.occupation === 'unemployed' && ['employment', 'rural'].includes(s.category)) score += 2;
-      if (profile.occupation === 'business' && s.category === 'employment') score += 2;
-      // Gender match
-      if (profile.gender === 'female' && s.category === 'women') score += 3;
-      // Age match
-      if (profile.age === '60+' && s.category === 'pension') score += 3;
-      if (profile.age === 'below18' && s.category === 'children') score += 3;
-      if (profile.age === '18-35' && s.category === 'student') score += 1;
-      // BPL match
-      if (profile.bpl && ['health', 'housing', 'pension', 'food', 'women'].includes(s.category)) score += 2;
-      // Income match
-      if (profile.income === 'below5k' && ['health', 'pension', 'housing', 'food'].includes(s.category)) score += 2;
-      if (profile.income === 'below10k' && ['health', 'food'].includes(s.category)) score += 1;
-      // Land owner - farmer schemes
-      if (profile.landOwner && s.category === 'farmer') score += 2;
-      // Universal schemes
+      let maxScore = 20; // approximate max possible score
+
+      // Occupation match (weight: 4)
+      if (profile.occupation === 'farmer' && s.category === 'farmer') score += 4;
+      if (profile.occupation === 'student' && s.category === 'student') score += 4;
+      if (profile.occupation === 'worker' && ['employment', 'rural'].includes(s.category)) score += 3;
+      if (profile.occupation === 'unemployed' && ['employment', 'rural'].includes(s.category)) score += 3;
+      if (profile.occupation === 'business' && s.category === 'employment') score += 3;
+      if (profile.occupation === 'housewife' && s.category === 'women') score += 3;
+
+      // Gender match (weight: 3)
+      if (profile.gender === 'female' && s.category === 'women') score += 4;
+      if (profile.gender === 'female' && ['children', 'health'].includes(s.category)) score += 1;
+
+      // Age match (weight: 3)
+      if (profile.age === '60+' && s.category === 'pension') score += 4;
+      if (profile.age === 'below18' && s.category === 'children') score += 4;
+      if (profile.age === 'below18' && s.category === 'student') score += 2;
+      if (profile.age === '18-35' && s.category === 'student') score += 2;
+      if (profile.age === '18-35' && s.category === 'employment') score += 1;
+
+      // BPL match (weight: 3)
+      if (profile.bpl && ['health', 'housing', 'pension', 'food', 'women', 'children'].includes(s.category)) score += 3;
+
+      // Income match (weight: 2)
+      if (profile.income === 'below5k' && ['health', 'pension', 'housing', 'food', 'women'].includes(s.category)) score += 3;
+      if (profile.income === 'below10k' && ['health', 'food', 'housing'].includes(s.category)) score += 2;
+
+      // Land owner - farmer schemes (weight: 2)
+      if (profile.landOwner && s.category === 'farmer') score += 3;
+      if (!profile.landOwner && s.category === 'rural') score += 1;
+
+      // Caste-based matching (weight: 3)
+      if (profile.caste === 'sc' || profile.caste === 'st') {
+        if (['student', 'housing', 'employment', 'women'].includes(s.category)) score += 3;
+        // SC/ST get higher probability on most welfare schemes
+        score += 1;
+      }
+      if (profile.caste === 'obc' || profile.caste === 'mbc') {
+        if (['student', 'employment'].includes(s.category)) score += 2;
+      }
+
+      // Education match (weight: 2)
+      if (profile.education === 'none' || profile.education === 'primary') {
+        if (['rural', 'food', 'pension', 'health'].includes(s.category)) score += 2;
+      }
+      if (profile.education === 'school' && s.category === 'student') score += 2;
+      if (profile.education === 'college' && s.category === 'student') score += 3;
+
+      // Universal schemes always get some score
       if (['food', 'health', 'special'].includes(s.category)) score += 1;
-      return score >= 2;
-    });
-  };
+
+      if (score >= 2) {
+        const probability = Math.min(95, Math.round((score / maxScore) * 100));
+        const priority: 'high' | 'medium' | 'low' = probability >= 70 ? 'high' : probability >= 40 ? 'medium' : 'low';
+        results.push({ scheme: s, score, probability, priority });
+      }
+    }
+
+    results.sort((a, b) => b.score - a.score);
+    return results;
+  }, [showResults, schemes, profile]);
 
   const labels: Record<string, Record<string, string>> = {
     age: { en: 'What is your age group?', ta: 'உங்கள் வயது என்ன?', tl: 'Ungal vayathu enna?' },
     gender: { en: 'What is your gender?', ta: 'உங்கள் பாலினம்?', tl: 'Ungal paalinam?' },
+    caste: { en: 'What is your community/caste?', ta: 'உங்கள் சாதி/சமூகம்?', tl: 'Ungal jaathi/samuugam?' },
     occupation: { en: 'What is your occupation?', ta: 'உங்கள் தொழில் என்ன?', tl: 'Ungal thozhil enna?' },
+    education: { en: 'What is your education level?', ta: 'உங்கள் கல்வி நிலை?', tl: 'Ungal kalvi nilai?' },
     income: { en: 'Monthly family income?', ta: 'மாத குடும்ப வருமானம்?', tl: 'Maadha kudumba varumanam?' },
     bpl: { en: 'Is your family BPL?', ta: 'உங்கள் குடும்பம் BPL ஆ?', tl: 'Ungal kudumbam BPL a?' },
     landOwner: { en: 'Do you own agricultural land?', ta: 'உங்களுக்கு விவசாய நிலம் உள்ளதா?', tl: 'Ungalukku vivasaya nilam ulladha?' },
@@ -77,6 +130,13 @@ const EligibilityPage = () => {
       { value: 'female', en: 'Female', ta: 'பெண்', tl: 'Penn' },
       { value: 'other', en: 'Other', ta: 'மற்றவை', tl: 'Matrravai' },
     ],
+    caste: [
+      { value: 'sc', en: 'SC (Scheduled Caste)', ta: 'SC (ஆதி திராவிடர்)', tl: 'SC (Aadhi Dravidar)' },
+      { value: 'st', en: 'ST (Scheduled Tribe)', ta: 'ST (பழங்குடி)', tl: 'ST (Pazhangudi)' },
+      { value: 'mbc', en: 'MBC (Most Backward)', ta: 'MBC (மிகவும் பிற்படுத்தப்பட்டோர்)', tl: 'MBC (Migavum Pirpaduthappattoor)' },
+      { value: 'obc', en: 'OBC (Backward Class)', ta: 'OBC (பிற்படுத்தப்பட்டோர்)', tl: 'OBC (Pirpaduthappattoor)' },
+      { value: 'general', en: 'General / Others', ta: 'பொது / மற்றவை', tl: 'Podhu / Matrravai' },
+    ],
     occupation: [
       { value: 'farmer', en: '🌾 Farmer', ta: '🌾 விவசாயி', tl: '🌾 Vivasayi' },
       { value: 'student', en: '🎓 Student', ta: '🎓 மாணவர்', tl: '🎓 Maanavar' },
@@ -85,6 +145,12 @@ const EligibilityPage = () => {
       { value: 'business', en: '💼 Business/Self-employed', ta: '💼 தொழில்/சுயதொழில்', tl: '💼 Thozhil/Suyathozhil' },
       { value: 'housewife', en: '🏠 Homemaker', ta: '🏠 இல்லத்தரசி', tl: '🏠 Illatharasi' },
     ],
+    education: [
+      { value: 'none', en: '📖 No formal education', ta: '📖 படிப்பு இல்லை', tl: '📖 Padippu illai' },
+      { value: 'primary', en: '📗 Primary (1-5)', ta: '📗 தொடக்கநிலை (1-5)', tl: '📗 Thodakka nilai (1-5)' },
+      { value: 'school', en: '📘 School (6-12)', ta: '📘 பள்ளி (6-12)', tl: '📘 Palli (6-12)' },
+      { value: 'college', en: '🎓 College/University', ta: '🎓 கல்லூரி', tl: '🎓 Kalloori' },
+    ],
     income: [
       { value: 'below5k', en: 'Below ₹5,000', ta: '₹5,000க்கு கீழ்', tl: '₹5,000kku keel' },
       { value: 'below10k', en: '₹5,000 - ₹10,000', ta: '₹5,000 - ₹10,000', tl: '₹5,000 - ₹10,000' },
@@ -92,9 +158,8 @@ const EligibilityPage = () => {
     ],
   };
 
-  const steps = ['age', 'gender', 'occupation', 'income', 'bpl', 'landOwner'];
+  const steps = ['age', 'gender', 'caste', 'occupation', 'education', 'income', 'bpl', 'landOwner'];
   const currentStep = steps[step];
-  const recommended = showResults ? getRecommended() : [];
   const progress = ((step + 1) / steps.length) * 100;
 
   const handleSelect = (key: string, value: any) => {
@@ -103,6 +168,21 @@ const EligibilityPage = () => {
       setTimeout(() => setStep(step + 1), 200);
     }
   };
+
+  const priorityColors = {
+    high: 'bg-green-100 text-green-800 border-green-300',
+    medium: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+    low: 'bg-orange-100 text-orange-800 border-orange-300',
+  };
+
+  const priorityLabels = {
+    high: { en: 'High Priority', ta: 'உயர் முன்னுரிமை', tl: 'Uyar Munnurimai' },
+    medium: { en: 'Medium Priority', ta: 'நடுத்தர முன்னுரிமை', tl: 'Naduthara Munnurimai' },
+    low: { en: 'Low Priority', ta: 'குறைந்த முன்னுரிமை', tl: 'Kuraintha Munnurimai' },
+  };
+
+  const highCount = getScored.filter(s => s.priority === 'high').length;
+  const medCount = getScored.filter(s => s.priority === 'medium').length;
 
   return (
     <div className="pb-20">
@@ -177,20 +257,49 @@ const EligibilityPage = () => {
           </div>
         ) : (
           <div>
+            {/* Summary Stats */}
+            <div className="grid grid-cols-3 gap-3 mb-4">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-center">
+                <Star className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                <p className="text-lg font-bold text-green-700">{highCount}</p>
+                <p className="text-xs text-green-600">{lang === 'ta' ? 'உயர்' : lang === 'tl' ? 'Uyar' : 'High'}</p>
+              </div>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-center">
+                <TrendingUp className="h-5 w-5 text-yellow-600 mx-auto mb-1" />
+                <p className="text-lg font-bold text-yellow-700">{medCount}</p>
+                <p className="text-xs text-yellow-600">{lang === 'ta' ? 'நடுத்தர' : lang === 'tl' ? 'Naduthara' : 'Medium'}</p>
+              </div>
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
+                <Percent className="h-5 w-5 text-primary mx-auto mb-1" />
+                <p className="text-lg font-bold text-primary">{getScored.length}</p>
+                <p className="text-xs text-muted-foreground">{lang === 'ta' ? 'மொத்தம்' : lang === 'tl' ? 'Motham' : 'Total'}</p>
+              </div>
+            </div>
+
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-base font-bold">{t(lang, 'recommendedSchemes')}</h2>
+              <Button variant="outline" size="sm" onClick={() => { setShowResults(false); setStep(0); }}>
+                {lang === 'ta' ? 'மீண்டும்' : lang === 'tl' ? 'Meendum' : 'Retry'}
+              </Button>
             </div>
-            {recommended.length > 0 ? (
-              <>
-                <p className="text-sm text-muted-foreground mb-3">
-                  {recommended.length} {t(lang, 'schemesFound')}
-                </p>
-                <div className="space-y-3">
-                  {recommended.map(s => (
-                    <SchemeCard key={s.id} scheme={s} lang={lang} />
-                  ))}
-                </div>
-              </>
+
+            {getScored.length > 0 ? (
+              <div className="space-y-3">
+                {getScored.map(({ scheme, probability, priority }) => (
+                  <div key={scheme.id} className="relative">
+                    {/* Priority & Probability Badge */}
+                    <div className="flex gap-2 mb-1">
+                      <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${priorityColors[priority]}`}>
+                        {priorityLabels[priority][lang] || priorityLabels[priority].en}
+                      </span>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
+                        {probability}% {lang === 'ta' ? 'வாய்ப்பு' : lang === 'tl' ? 'Vaippu' : 'likely'}
+                      </span>
+                    </div>
+                    <SchemeCard scheme={scheme} lang={lang} />
+                  </div>
+                ))}
+              </div>
             ) : (
               <p className="text-center text-muted-foreground py-8">{t(lang, 'noResults')}</p>
             )}
