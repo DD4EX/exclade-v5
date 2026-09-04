@@ -7,6 +7,27 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    // Keep React's hook dispatcher and renderer in the same optimized module
+    // graph. Vite can otherwise create a second React instance during a cold
+    // dependency scan, which makes hooks fail until the next reload.
+    optimizeDeps: {
+      include: [
+        "react",
+        "react/jsx-runtime",
+        "react/jsx-dev-runtime",
+        "react-dom",
+        "react-dom/client",
+      ],
+    },
+    environments: {
+      ssr: {
+        optimizeDeps: {
+          include: ["react-dom/server"],
+        },
+      },
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
