@@ -36,12 +36,20 @@ export function RegistrationSection() {
 
   const setField = (key: keyof Fields, value: string) => {
     setFields((prev) => ({ ...prev, [key]: value }));
-    setErrors((prev) => ({ ...prev, [key]: undefined }));
+    setErrors((prev) => {
+      const next = { ...prev };
+      delete next[key];
+      return next;
+    });
   };
 
   const toggleEvent = (name: string) => {
     setSelected((prev) => (prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]));
-    setErrors((prev) => ({ ...prev, events: undefined }));
+    setErrors((prev) => {
+      const next = { ...prev };
+      delete next.events;
+      return next;
+    });
   };
 
   const validate = () => {
