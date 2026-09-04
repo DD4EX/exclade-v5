@@ -32,5 +32,11 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    router: {
+      // Generated `?tsr-split=component` modules can enter a second optimized
+      // React graph in the hosted preview, leaving the hook dispatcher null.
+      // Keep route modules intact so every component uses the renderer's React.
+      autoCodeSplitting: false,
+    },
   },
 });
