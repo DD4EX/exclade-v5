@@ -14,10 +14,6 @@ import { SiteNav } from "@/components/SiteNav";
 import { TechnicalOperations } from "@/components/TechnicalOperations";
 
 export const Route = createFileRoute("/")({
-  // Keep this hook-heavy landing page in the route module. In preview builds,
-  // the generated `?tsr-split=component` module can load through a separate
-  // optimized React graph and leave React's hook dispatcher unset.
-  codeSplitGroupings: [],
   head: () => ({
     meta: [
       { title: "EXCLADE 2K26 | KSR College of Engineering" },
