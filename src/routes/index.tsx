@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExcladePage } from "@/components/ExcladePage";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -12,5 +11,4 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: ExcladePage,
 });
